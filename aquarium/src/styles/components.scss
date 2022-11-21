@@ -2,6 +2,7 @@
 
 /* main size container */
 .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
@@ -10,6 +11,96 @@
 /* prevent scrolling (usually when a navigation menu or a modal window is shown) */
 .no-scroll {
     overflow: hidden;
+}
+
+/* buttons */
+/* wavy button
+example:
+<button class="btn">
+    <span class="btn__content">
+        Start Me Up
+    </span>
+    <span class="btn__wave"></span>
+</button> */
+.btn {
+    max-width: 250px;
+    padding: 10px 40px;
+    background-color: $white;
+    border: 2px solid $white;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+
+    .btn__content {
+        color: $white;
+        font-family: $montserrat;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 120%;
+        transition: 0.5s ease;
+        position: relative;
+        z-index: 2;
+    }
+
+    .btn__wave {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        transform: translate3d(0, 0, 0);
+        transition: 2s ease-in;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        &::before,
+        &::after {
+            content: '';
+            width: 200%;
+            height: 200%;
+            transform: translate3d(-50%, -75%, 0);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            z-index: 1;
+        }
+
+        &::before {
+            border-radius: 45%;
+            background-color: rgba(21, 69, 125, 1);
+            animation: btnWave 5s linear infinite;
+        }
+
+        &::after {
+            border-radius: 35%;
+            background-color: rgba(21, 69, 125, 0.5);
+            animation: btnWave 10s linear infinite;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        .btn__content {
+            color: $blue;
+        }
+
+        .btn__wave {
+            transform: translate3d(0, -150px, 0);
+            transition: 0.75s ease-in;
+        }
+    }
+}
+
+@keyframes btnWave {
+    0% {
+        transform: translate3d(-50%, -75%, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(-50%, -75%, 0) rotate(360deg);
+    }
 }
 
 /* SCREEN ADAPTATION */
