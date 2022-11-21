@@ -1,0 +1,31 @@
+@import '../fonts/fonts.scss';
+@import './variables.scss';
+@import './components.scss';
+
+* {
+    /* reset default styles */
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    /* set common styles */
+}
+
+/* make the footer always stick to the bottom even if there's no content on the page */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* SCREEN ADAPTATION */
+@media (max-width: $smallScreen) {
+}
+
+/* tablets */
+@media (max-width: $tablet) {
+}
+
+/* mobile phones */
+@media (max-width: $phone) {
+}

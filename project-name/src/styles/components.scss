@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+/* main size container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* prevent scrolling (usually when a navigation menu or a modal window is shown) */
+.no-scroll {
+    overflow: hidden;
+}
+
+/* SCREEN ADAPTATION */
+@media (max-width: $smallScreen) {
+}
+
+/* tablets */
+@media (max-width: $tablet) {
+}
+
+/* mobile phones */
+@media (max-width: $phone) {
+}

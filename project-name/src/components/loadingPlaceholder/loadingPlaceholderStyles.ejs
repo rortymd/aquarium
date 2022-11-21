@@ -1,0 +1,67 @@
+<style id="loadingPlaceholderStyles">
+    body {
+        overflow: hidden;
+    }
+
+    .loadingPlaceholder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(28, 28, 28);
+        transition: opacity .3s ease;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+    }
+
+    .loadingPlaceholder-hidden {
+        opacity: 0;
+    }
+
+    .loadingPlaceholder__inner {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+
+    .loadingPlaceholder__inner div {
+        display: inline-block;
+        position: absolute;
+        left: 8px;
+        width: 16px;
+        background: rgb(254, 47, 47);
+        animation: loadingPlaceholderAnim 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+    }
+
+    .loadingPlaceholder__inner div:nth-child(1) {
+        left: 8px;
+        animation-delay: -0.24s;
+    }
+
+    .loadingPlaceholder__inner div:nth-child(2) {
+        left: 32px;
+        animation-delay: -0.12s;
+    }
+
+    .loadingPlaceholder__inner div:nth-child(3) {
+        left: 56px;
+        animation-delay: 0;
+    }
+
+    @keyframes loadingPlaceholderAnim {
+        0% {
+            top: 8px;
+            height: 64px;
+        }
+
+        50%,
+        100% {
+            top: 24px;
+            height: 32px;
+        }
+    }
+</style>
