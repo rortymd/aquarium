@@ -1,5 +1,6 @@
-# project-template
-My basic setup for web applications.
+# Aquarium
+
+Landing page for the Aquarium entertainment center. Portfolio project.
 
 Used libraries and services:
 
