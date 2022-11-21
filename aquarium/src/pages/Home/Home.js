@@ -3,6 +3,7 @@ import 'core-js/actual';
 // styles
 import 'modern-normalize/modern-normalize.css';
 import 'Src/styles/styles.scss';
+import 'Src/fonts/fonts.scss';
 // components
 import lazyLoadImages from 'Components/lazyLoadImages/lazyLoadImages';
 import 'Components/lazyLoadImages/lazyLoadImages.scss';
