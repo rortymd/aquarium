@@ -8,6 +8,7 @@
     text-decoration: none;
     list-style: none;
     /* set common styles */
+    line-height: 120%;
 }
 
 /* make the footer always stick to the bottom even if there's no content on the page */
@@ -15,6 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #00051b;
 }
 
 /* SCREEN ADAPTATION */

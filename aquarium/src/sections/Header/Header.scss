@@ -1,6 +1,103 @@
 @import '../../styles/variables.scss';
 
-header {
-    padding: 100px;
-    background-color: #00051B;
+.header {
+    background-color: #00051b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 90;
+}
+
+.header__inner {
+    padding: 20px 0;
+}
+
+/* burger button */
+.header__nav-btn,
+.header__nav-btn.is-active {
+    display: none;
+    outline: none;
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+        background-color: $white;
+        transition: $transitionBasic;
+    }
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+
+        .hamburger-inner,
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+            background-color: #6cb3e4;
+        }
+    }
+}
+
+/* ANIMATIONS */
+@keyframes showLinks {
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* SCREEN ADAPTATION */
+@media (max-width: $smallScreen) {
+    /* burger button */
+    .header__nav-btn,
+    .header__nav-btn.is-active {
+        display: block;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* <ul> list of links */
+    .header__links-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 25px;
+        background-color: rgba(21, 69, 125, 0.95);
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+        transition: 0.4s ease-in-out;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+
+        &.header__links-list--active {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    /* single list item <li> */
+    .header__links-item {
+        opacity: 0;
+        transform: translate3d(0, 25px, 0);
+    }
+
+    /* smooth transition for each item sequentially */
+    @for $i from 1 through 6 {
+        .header__links-list--active {
+            .header__links-item:nth-child(#{$i}) {
+                animation: showLinks ease-in-out 0.6s forwards;
+                animation-delay: calc($i - 1) * 0.2s;
+            }
+        }
+    }
+
+    /* navigation <a> link  */
+    .header__nav-link {
+        font-size: 22px;
+    }
 }
