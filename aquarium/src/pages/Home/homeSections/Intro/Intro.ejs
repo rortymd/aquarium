@@ -1,7 +1,51 @@
 <section class="intro">
-    <div class="container">
-        <div class="intro__inner">
-            Intro section
+    <div class="intro__background">
+        <picture class="intro__bg-img">
+            <source media="(max-width: 768px)" srcset="./homeSections/Intro/img/intro-img-sm.webp"
+                class="intro__bg-img">
+            <img src="./homeSections/Intro/img/intro-img.webp" class="intro__bg-img">
+        </picture>
+    </div>
+    <div class="intro__content">
+        <div class="container">
+            <div class="intro__inner">
+                <div class="intro__text-section">
+                    <h1 class="intro__title">
+                        The largest <br> aquarium in <br> the world
+                    </h1>
+                    <h2 class="intro__subtitle">
+                        More than 15,000 inhabitants of the underwater world in one place
+                    </h2>
+                    <a href="#" class="btn intro__link">
+                        <span class="btn__content">
+                            Buy tickets
+                        </span>
+                        <span class="btn__wave"></span>
+                    </a>
+                </div>
+                <div class="intro__video-section">
+                    <button class="intro__play-btn">
+                        <svg width="54" height="55" viewBox="0 0 54 55" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="intro__play-icon">
+                            <path
+                                d="M53.5 27.3323C53.5 41.9493 41.6361 53.7998 27 53.7998C12.3639 53.7998 0.5 41.9493 0.5 27.3323C0.5 12.7152 12.3639 0.864746 27 0.864746C41.6361 0.864746 53.5 12.7152 53.5 27.3323Z"
+                                stroke="white" />
+                            <path
+                                d="M35.4977 26.4662C36.165 26.851 36.165 27.814 35.4977 28.1987L23.4995 35.1176C22.8329 35.502 22 35.0208 22 34.2513L22 20.4136C22 19.6441 22.8329 19.1629 23.4995 19.5473L35.4977 26.4662Z"
+                                fill="white" id="intro__play-triangle" />
+                        </svg>
+                        <span class="intro__play-text">
+                            Watch the live broadcast from the Aquarium.
+                        </span>
+                    </button>
+                    <div class="intro__video-wrapper">
+                        <video id="intro__player" playsinline controls preload="metadata"
+                            poster="./homeSections/Intro/img/video-poster.webp">
+                            <source src="./homeSections/Intro/img/video-presentation.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

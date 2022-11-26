@@ -10,11 +10,13 @@ import 'Components/lazyLoadImages/lazyLoadImages.scss';
 import hideLoadingPlaceholder from 'Components/loadingPlaceholder/hideLoadingPlaceholder';
 // sections
 import { HeaderSection } from 'Sections/Header/Header';
+import { IntroSection } from './homeSections/Intro/Intro';
 import 'Sections/Footer/Footer.scss';
 
 const bodyContainer = document.body;
 
 HeaderSection();
+IntroSection();
 
 window.addEventListener('DOMContentLoaded', () => {
     hideLoadingPlaceholder();

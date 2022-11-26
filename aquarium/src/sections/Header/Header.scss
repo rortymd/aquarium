@@ -1,13 +1,11 @@
 @import '../../styles/variables.scss';
 
 .header {
-    background-color: #00051b;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    z-index: 90;
+    z-index: 99;
 }
 
 .header__inner {
