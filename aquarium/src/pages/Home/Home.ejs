@@ -6,18 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- page description -->
-    <meta name="description" content="Aquarium website; DmitriyR54">
+    <meta name="description" content="Aquarium website; DmitriyR54; Portfolio; Webpack; Landing page">
     <title>Aquarium</title>
-    <!-- show the placeholder while the page is loading -->
+    <!-- loading placeholder styles -->
     <%- include('../../components/loadingPlaceholder/loadingPlaceholderStyles.ejs') %>
 </head>
 
 <body>
     <!-- show the placeholder while the page is loading -->
     <%- include('../../components/loadingPlaceholder/loadingPlaceholder.ejs') %>
+        <!-- page content -->
         <%- include('../../sections/Header/Header.ejs') %>
             <main class="main">
                 <%- include('./homeSections/Intro/Intro.ejs') %>
+                    <%- include('./homeSections/Gallery/Gallery.ejs') %>
             </main>
             <%- include('../../sections/Footer/Footer.ejs') %>
 </body>

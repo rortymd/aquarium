@@ -1,7 +1,7 @@
 // libraries
 import 'core-js/actual';
-// styles
 import 'modern-normalize/modern-normalize.css';
+// styles
 import 'Src/styles/styles.scss';
 import 'Src/fonts/fonts.scss';
 // components
@@ -11,9 +11,8 @@ import hideLoadingPlaceholder from 'Components/loadingPlaceholder/hideLoadingPla
 // sections
 import { HeaderSection } from 'Sections/Header/Header';
 import { IntroSection } from './homeSections/Intro/Intro';
+import './homeSections/Gallery/Gallery.scss';
 import 'Sections/Footer/Footer.scss';
-
-const bodyContainer = document.body;
 
 HeaderSection();
 IntroSection();
