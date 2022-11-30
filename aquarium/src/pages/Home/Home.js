@@ -12,10 +12,12 @@ import hideLoadingPlaceholder from 'Components/loadingPlaceholder/hideLoadingPla
 import { HeaderSection } from 'Sections/Header/Header';
 import { IntroSection } from './homeSections/Intro/Intro';
 import './homeSections/Gallery/Gallery.scss';
+import { InhabitantsSection } from './homeSections/Inhabitants/Inhabitants';
 import 'Sections/Footer/Footer.scss';
 
 HeaderSection();
 IntroSection();
+InhabitantsSection();
 
 window.addEventListener('DOMContentLoaded', () => {
     hideLoadingPlaceholder();

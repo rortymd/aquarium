@@ -185,6 +185,7 @@ example:
         width: 2px;
         height: 50px;
         background-color: $blue;
+        box-shadow: $shadowBasic;
         position: absolute;
         top: -50px;
         left: 0;
@@ -196,6 +197,7 @@ example:
         width: 2px;
         height: 100%;
         background-color: $blue;
+        box-shadow: $shadowBasic;
         position: absolute;
         top: 0;
         right: 0;
@@ -210,9 +212,10 @@ example:
 
     &::before {
         content: '';
-        width: 2px;
+        width: 1px;
         height: 50px;
         background-color: $blue;
+        box-shadow: $shadowBasic;
         position: absolute;
         top: -50px;
         right: 0;
@@ -224,6 +227,7 @@ example:
         width: 2px;
         height: 100%;
         background-color: $blue;
+        box-shadow: $shadowBasic;
         position: absolute;
         top: 0;
         left: 0;
@@ -240,11 +244,19 @@ example:
     .container {
         padding: 0 10px;
     }
+
+    .title {
+        font-size: 44px;
+    }
 }
 
 /* mobile phones */
 @media (max-width: $phone) {
     .container {
         padding: 0 5px;
+    }
+
+    .title {
+        font-size: 34px;
     }
 }

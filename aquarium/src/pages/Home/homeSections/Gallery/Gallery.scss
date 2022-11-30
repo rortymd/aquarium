@@ -13,7 +13,8 @@
 
 .gallery__picture-wrapper {
     overflow: hidden;
-    box-shadow: 0 0 5px 3px rgba(21, 69, 125, 0.3);
+    border-radius: 2px;
+    box-shadow: $shadowBasic;
 
     .image {
         display: flex;

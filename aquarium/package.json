@@ -53,6 +53,7 @@
         "xml-loader": "^1.2.1"
     },
     "dependencies": {
+        "@splidejs/splide": "^4.1.4",
         "hamburgers": "^1.2.1",
         "plyr": "^3.7.3"
     }
