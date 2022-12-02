@@ -13,11 +13,13 @@ import { HeaderSection } from 'Sections/Header/Header';
 import { IntroSection } from './homeSections/Intro/Intro';
 import './homeSections/Gallery/Gallery.scss';
 import { InhabitantsSection } from './homeSections/Inhabitants/Inhabitants';
+import { PricesSection } from './homeSections/Prices/Prices';
 import 'Sections/Footer/Footer.scss';
 
 HeaderSection();
 IntroSection();
 InhabitantsSection();
+PricesSection();
 
 window.addEventListener('DOMContentLoaded', () => {
     hideLoadingPlaceholder();
