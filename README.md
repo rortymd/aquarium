@@ -14,4 +14,4 @@ Used libraries and services:
 2. Fonts are downloaded from - https://google-webfonts-helper.herokuapp.com/fonts/
 3. Burger menu - https://jonsuh.com/hamburgers/
 4. JPG to WebP converter - https://convertio.co/, https://www.online-convert.com/
-5. Photos and video source - https://www.pexels.com/, https://unsplash.com/, https://www.pinterest.com/
+5. Photos and video source - https://www.pexels.com/, https://unsplash.com/
