@@ -3,13 +3,13 @@ import '@splidejs/splide/dist/css/splide-core.min.css';
 // styles
 import './splideCarousel.scss';
 
-const splideCarousel = (carouselId) => {
+const splideCarousel = (carouselId, perPage, height = 'auto') => {
     const splide = new Splide(`#${carouselId}`, {
         type: 'loop',
-        perPage: 5,
+        perPage,
         focus: 'center',
         autoplay: true,
-        height: '400px',
+        height,
         gap: '20px',
         flickPower: 200,
         breakpoints: {

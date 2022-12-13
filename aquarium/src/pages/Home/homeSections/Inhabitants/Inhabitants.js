@@ -4,7 +4,7 @@ import { splideCarousel } from 'Components/splideCarousel/splideCarousel';
 import './Inhabitants.scss';
 
 const InhabitantsSection = () => {
-    splideCarousel('inhabitants__carousel');
+    splideCarousel('inhabitants__carousel', 5, '400px');
 };
 
 export { InhabitantsSection };
