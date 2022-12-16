@@ -3,12 +3,6 @@
         [
             "@babel/preset-env",
             {
-                "targets": {
-                    "edge": "80",
-                    "firefox": "80",
-                    "chrome": "80",
-                    "safari": "13"
-                },
                 "useBuiltIns": "entry",
                 "corejs": "^3.22.5"
             }

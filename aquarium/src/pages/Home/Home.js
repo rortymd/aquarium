@@ -16,6 +16,7 @@ import { InhabitantsSection } from './homeSections/Inhabitants/Inhabitants';
 import { PricesSection } from './homeSections/Prices/Prices';
 import { ServicesSection } from './homeSections/Services/Services';
 import { TestimonialsSection } from './homeSections/Testimonials/Testimonials';
+import { ContactUsSection } from './homeSections/ContactUs/ContactUs';
 import 'Sections/Footer/Footer.scss';
 
 HeaderSection();
@@ -24,6 +25,7 @@ InhabitantsSection();
 PricesSection();
 ServicesSection();
 TestimonialsSection();
+ContactUsSection();
 
 window.addEventListener('DOMContentLoaded', () => {
     hideLoadingPlaceholder();

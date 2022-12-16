@@ -10,7 +10,7 @@
 
 /* prevent scrolling (usually when a navigation menu or a modal window is shown) */
 .no-scroll {
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 /* buttons */
@@ -246,6 +246,7 @@ example:
     }
 
     .title {
+        margin: 40px 0;
         font-size: 44px;
     }
 }
