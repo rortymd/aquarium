@@ -114,7 +114,17 @@ example:
     justify-content: space-between;
     align-items: center;
 
-    ul {
+    /* logotype */
+    .navigation__logo {
+        width: 180px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    /* list of links */
+    .navigation__list {
         display: flex;
         align-items: center;
         column-gap: 25px;

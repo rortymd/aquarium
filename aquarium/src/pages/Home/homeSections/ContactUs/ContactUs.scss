@@ -1,8 +1,12 @@
 @import '../../../../styles/components.scss';
 
+.contact{
+    position: relative;
+    z-index: 2;
+}
+
 .contact__inner {
     @include sectionLeftBorder;
-    padding-bottom: 20px;
 }
 
 .contact__content {
