@@ -12,20 +12,20 @@
     grid-row: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
+    max-height: 100vh;
     overflow: hidden;
     z-index: 1;
 }
 
 /* background image */
 .intro__bg-img {
-    width: 100%;
-    min-width: fit-content;
-    height: 100vh;
+    box-shadow: 0 0 30px $dark-blue;
 }
 
 /* main content */
-.intro__content {
+.intro .container {
     grid-column: 1;
     grid-row: 1;
     z-index: 2;
@@ -38,8 +38,8 @@
 
 /* text section */
 .intro__text-section {
-    width: 65%;
-    padding-top: 160px;
+    width: 45%;
+    margin-top: 160px;
 }
 
 /* intro main title */
@@ -68,23 +68,25 @@
 
 /* video section */
 .intro__video-section {
-    width: 30%;
-    margin-top: 250px;
-    padding: 125px 50px 0 0;
-    background-image: url('./img/intro-borders.svg');
-    background-size: 120%;
-    aspect-ratio: 1 / 1;
+    align-self: flex-end;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
     position: relative;
 }
 
 /* play video button */
 .intro__play-btn {
+    grid-column: 1;
+    grid-row: 1;
     display: flex;
     max-width: 350px;
     background-color: transparent;
     cursor: pointer;
     text-align: left;
     outline: none;
+    z-index: 2;
 
     &:hover,
     &:focus {
@@ -118,6 +120,13 @@
     transition: $transitionBasic;
 }
 
+/* background for the button */
+.intro__video-section-bg {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+}
+
 /* video container */
 .intro__video-wrapper {
     width: 50px;
@@ -131,23 +140,25 @@
 }
 
 /* SCREEN ADAPTATION */
-@media (min-width: 1800px) {
+@media (max-width: $smallScreen) {
     /* text section */
     .intro__text-section {
-        padding-top: 210px;
+        flex-grow: 1;
     }
 
-    /* video section */
-    .intro__video-section {
-        padding-top: 175px;
+    /* intro main title */
+    .intro__title {
+        font-size: 58px;
     }
-}
 
-@media (max-width: $smallScreen) {
-    /* video section */
-    .intro__video-section {
-        align-self: flex-end;
-        padding: 75px 25px 0 0;
+    /* text under the title */
+    .intro__subtitle {
+        font-size: 18px;
+    }
+
+    /* play video button */
+    .intro__play-btn {
+        max-width: 300px;
     }
 
     /* play button text */
@@ -158,66 +169,61 @@
 
 /* tablets */
 @media (max-width: $tablet) {
-    /* background image */
-    .intro__bg-img {
-        height: 100%;
+    /* background image wrapper */
+    .intro__background {
+        max-height: none;
     }
 
     /* main content */
     .intro__inner {
         flex-direction: column;
-        justify-content: flex-start;
     }
 
     /* text section */
     .intro__text-section {
         width: 100%;
-        padding-top: 160px;
     }
 
     /* intro main title */
     .intro__title {
+        max-width: 95%;
+        margin: 0 auto;
         font-size: 52px;
+        text-align: center;
+        line-height: 140%;
     }
 
     /* text under the title */
     .intro__subtitle {
-        max-width: 50%;
-        margin-top: 25px;
+        margin: 40px auto 0;
         font-size: 18px;
+        text-align: center;
+    }
+
+    /* 'Buy tickets' link */
+    .intro__link {
+        margin: 60px auto 120px;
     }
 
     /* video section */
     .intro__video-section {
-        width: 50%;
-        margin-top: 50px;
-        padding-top: 100px;
+        margin: 0 auto;
     }
 }
 
 /* mobile phones */
 @media (max-width: $phone) {
-    /* intro main title */
-    .intro__title {
-        font-size: 46px;
+    /* text section */
+    .intro__text-section {
     }
 
-    /* text under the title */
-    .intro__subtitle {
-        max-width: 80%;
+    /* intro main title */
+    .intro__title {
+        font-size: 44px;
     }
 
     /* 'Buy tickets' link */
     .intro__link {
-        margin: 120px auto 50px;
-    }
-
-    /* video section */
-    .intro__video-section {
-        width: 80%;
-        margin: 0 0 0 auto;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-position: 50px 50px;
+        margin: 40px auto 80px;
     }
 }

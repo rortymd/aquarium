@@ -15,3 +15,4 @@ Used libraries and services:
 3. Burger menu - https://jonsuh.com/hamburgers/
 4. JPG to WebP converter - https://convertio.co/, https://www.online-convert.com/
 5. Photos and video source - https://www.pexels.com/, https://unsplash.com/
+6. SVG editor - https://boxy-svg.com/

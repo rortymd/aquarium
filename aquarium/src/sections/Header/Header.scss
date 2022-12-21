@@ -1,28 +1,40 @@
 @import '../../styles/variables.scss';
 
 .header {
+    transition: $transitionBasic;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
+
+    &.header--scroll {
+        background-color: rgba(0, 5, 27, 0.97);
+        box-shadow: 0 0 10px 10px rgba(0, 5, 27, 0.97);
+
+        .header__inner {
+            padding: 5px 0;
+        }
+    }
 }
 
 .header__inner {
     padding: 20px 0;
+    transition: padding $transitionBasic;
 }
 
 /* burger button */
 .header__nav-btn,
 .header__nav-btn.is-active {
     display: none;
+    transition: 0.4s ease-in-out;
     outline: none;
 
     .hamburger-inner,
     .hamburger-inner::before,
     .hamburger-inner::after {
         background-color: $white;
-        transition: $transitionBasic;
+        transition: 0.4s ease-in-out;
     }
 
     &:hover,
@@ -33,6 +45,7 @@
         .hamburger-inner::before,
         .hamburger-inner::after {
             background-color: #6cb3e4;
+            background-color: $coral;
         }
     }
 }
@@ -60,11 +73,12 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        row-gap: 25px;
-        background-color: rgba(21, 69, 125, 0.95);
+        row-gap: 30px;
+        background-color: rgba(0, 5, 27, 0.97);
         opacity: 0;
         transform: translate3d(0, 100%, 0);
         transition: 0.4s ease-in-out;
+        overflow: auto;
         position: fixed;
         top: 0;
         left: 0;
@@ -81,7 +95,12 @@
     /* single list item <li> */
     .header__links-item {
         opacity: 0;
-        transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 50px, 0);
+
+        /* navigation <a> link  */
+        .header__nav-link {
+            font-size: 20px;
+        }
     }
 
     /* smooth transition for each item sequentially */
@@ -89,13 +108,22 @@
         .header__links-list--active {
             .header__links-item:nth-child(#{$i}) {
                 animation: showLinks ease-in-out 0.6s forwards;
-                animation-delay: calc($i - 1) * 0.2s;
+                animation-delay: calc(0.15s * $i);
             }
         }
     }
+}
 
-    /* navigation <a> link  */
-    .header__nav-link {
-        font-size: 22px;
+/* tablet */
+@media (max-width: $tablet) {
+    .header__inner {
+        padding: 10px 0;
+    }
+}
+
+/* mobile phones */
+@media (max-width: $tablet) {
+    .header__inner {
+        padding: 5px 0;
     }
 }

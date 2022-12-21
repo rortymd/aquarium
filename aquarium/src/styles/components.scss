@@ -161,7 +161,7 @@ example:
         color: #ff7f50;
     }
 
-    &.navigation__link-active {
+    &.navigation__link--active {
         &::after {
             opacity: 1;
             transform: translate3d(-50%, 7px, 0);
@@ -169,7 +169,7 @@ example:
 
         &:hover,
         &:focus {
-            color: $light-blue;
+            color: #6cb3e4;
         }
     }
 }

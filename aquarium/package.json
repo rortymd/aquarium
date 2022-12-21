@@ -55,6 +55,7 @@
     },
     "dependencies": {
         "@splidejs/splide": "^4.1.4",
+        "animated-scroll-to": "^2.3.0",
         "hamburgers": "^1.2.1",
         "plyr": "^3.7.3"
     }
