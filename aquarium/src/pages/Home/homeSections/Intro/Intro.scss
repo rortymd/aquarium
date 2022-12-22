@@ -4,6 +4,21 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    position: relative;
+
+    /* background image shadow */
+    &::after {
+        content: '';
+        width: 100%;
+        max-width: 2000px;
+        height: 99%;
+        box-shadow: 0 5px 30px $dark-blue;
+        transform: translateX(-50%);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: -1;
+    }
 }
 
 /* background image wrapper */
@@ -17,11 +32,6 @@
     max-height: 100vh;
     overflow: hidden;
     z-index: 1;
-}
-
-/* background image */
-.intro__bg-img {
-    box-shadow: 0 0 30px $dark-blue;
 }
 
 /* main content */
@@ -49,6 +59,11 @@
     font-size: 64px;
     font-weight: 600;
     text-transform: uppercase;
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+    transition: 0.5s linear;
+    transition-delay: 0.5s;
+    transition-property: transform, opacity;
 }
 
 /* text under the title */
@@ -59,11 +74,21 @@
     font-family: $montserrat;
     font-size: 20px;
     font-weight: 600;
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+    transition: 0.5s linear;
+    transition-delay: 1s;
+    transition-property: transform, opacity;
 }
 
 /* 'Buy tickets' link */
 .intro__link {
     margin: 60px 0 0 60px;
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+    transition: 0.5s linear;
+    transition-delay: 1.5s;
+    transition-property: transform, opacity;
 }
 
 /* video section */
@@ -213,10 +238,6 @@
 
 /* mobile phones */
 @media (max-width: $phone) {
-    /* text section */
-    .intro__text-section {
-    }
-
     /* intro main title */
     .intro__title {
         font-size: 44px;
