@@ -11,7 +11,7 @@ import hideLoadingPlaceholder from 'Components/loadingPlaceholder/hideLoadingPla
 // sections
 import { HeaderSection } from 'Sections/Header/Header';
 import { IntroSection } from './homeSections/Intro/Intro';
-import './homeSections/Gallery/Gallery.scss';
+import { GallerySection } from './homeSections/Gallery/Gallery';
 import { InhabitantsSection } from './homeSections/Inhabitants/Inhabitants';
 import { PricesSection } from './homeSections/Prices/Prices';
 import { ServicesSection } from './homeSections/Services/Services';
@@ -21,6 +21,7 @@ import 'Sections/Footer/Footer.scss';
 
 HeaderSection();
 IntroSection();
+GallerySection();
 InhabitantsSection();
 PricesSection();
 ServicesSection();

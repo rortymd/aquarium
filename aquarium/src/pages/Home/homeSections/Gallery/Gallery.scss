@@ -7,7 +7,7 @@
 .gallery__masonry {
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr;
-    grid-template-rows: repeat(3, 350px);
+    grid-template-rows: repeat(3, 300px);
     gap: 20px;
 }
 
@@ -15,25 +15,27 @@
     overflow: hidden;
     border-radius: 2px;
     box-shadow: $shadowBasic;
+    opacity: 0.75;
+    transition: $transitionBasic;
+    cursor: crosshair;
+
+    &:hover {
+        opacity: 1;
+    }
 
     .image {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         width: 100%;
         height: 100%;
         transition: $transitionBasic;
 
         .lazy-image {
-            flex-shrink: 0;
-            min-height: 100%;
             max-width: none;
             width: auto;
+            min-height: 100%;
+            height: min-content;
             transform: scale(0.7);
-        }
-
-        &:hover {
-            transform: scale(1.1);
+            transform-origin: top left;
+            position: relative;
         }
     }
 
@@ -61,6 +63,7 @@
 @media (max-width: $smallScreen) {
     .gallery__masonry {
         grid-template-rows: repeat(3, 300px);
+        padding: 0 30px;
     }
 }
 
