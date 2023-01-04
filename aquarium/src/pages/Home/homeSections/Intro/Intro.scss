@@ -165,6 +165,13 @@
 }
 
 /* SCREEN ADAPTATION */
+@media (max-height: 600px) {
+    /* background image wrapper */
+    .intro__background {
+        max-height: 700px;
+    }
+}
+
 @media (max-width: $smallScreen) {
     /* text section */
     .intro__text-section {
