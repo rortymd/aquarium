@@ -25,7 +25,9 @@ const splideCarousel = (carouselId, perPage, height = 'auto') => {
         },
     });
 
-    splide.mount();
+    window.addEventListener('DOMContentLoaded', () => {
+        splide.mount();
+    });
 };
 
 export { splideCarousel };
