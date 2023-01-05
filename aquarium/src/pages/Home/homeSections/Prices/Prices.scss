@@ -2,7 +2,6 @@
 
 .prices__inner {
     @include sectionRightBorder;
-    padding-bottom: 35px;
 }
 
 /* wrapper for the prices items */
@@ -24,20 +23,19 @@
     opacity: 0;
     transform: translate3d(0, 60px, 0);
     transition: 0.5s linear;
+    transition-property: transform, opacity;
     position: relative;
 
-    /* gradient shadow */
     &::before {
         content: '';
-        width: calc(100% + 12px);
-        height: calc(100% + 20px);
-        background-image: linear-gradient(to bottom, rgba($blue, 0), $dark-blue 40%);
-        border-radius: 10px;
-        opacity: 0.5;
-        filter: blur(10px);
+        width: calc(100% + 8px);
+        height: calc(100% + 5px);
+        background-image: linear-gradient(to bottom, rgba($blue, 0), $dark-blue 60%);
+        border-radius: 4px;
+        opacity: 0.25;
         position: absolute;
         top: 0px;
-        left: -6px;
+        left: -4px;
         z-index: -1;
     }
 

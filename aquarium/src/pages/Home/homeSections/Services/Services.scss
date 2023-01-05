@@ -20,6 +20,10 @@
     transition: $transitionBasic;
     transition-property: opacity;
     z-index: 1;
+
+    .services__image {
+        box-shadow: 0 0 10px 1px rgba($light-blue, 0.3);
+    }
 }
 
 /* wrapper for all of the text block */
@@ -145,10 +149,6 @@
         grid-row: 1;
         width: 80%;
         margin: 0 auto;
-
-        .services__image {
-            box-shadow: 0 0 10px 1px rgba($light-blue, 0.3);
-        }
     }
 
     /* wrapper for all of the text block */

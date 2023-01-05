@@ -62,10 +62,10 @@ const filterAnimation = () => {
         }
     });
 
-    // show correspondive to the active item information
+    /* show correspondive to the active item information */
     filterFunctionality(servicesImages, activeImgWrapper.querySelector('.services__image'), textItems);
 
-    // show the section's blocks when it appears in the user's viewport
+    /* show the section when a user scrolls down to it */
     filterObserver(services, activeImgWrapper);
 
     // toggle the filter items

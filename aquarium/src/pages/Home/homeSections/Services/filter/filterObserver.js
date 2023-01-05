@@ -1,3 +1,5 @@
+/* show the section when a user scrolls down to it */
+
 const filterObserver = (services, activeImgWrapper) => {
     const filterImagesWrapper = services.querySelector('.services__items');
     const textWrapper = services.querySelector('.services__text');

@@ -1,12 +1,13 @@
 @import '../../../../styles/components.scss';
 
-.contact{
+.contact {
     position: relative;
     z-index: 2;
 }
 
 .contact__inner {
     @include sectionLeftBorder;
+    padding-bottom: 0;
 }
 
 .contact__content {
@@ -14,23 +15,9 @@
     justify-content: space-between;
     padding: 75px 50px 50px;
     background-image: linear-gradient(to bottom, rgba($blue, 0), $dark-blue 40%);
-    border-radius: 2px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 10px rgba(0, 5, 27, 0.5);
     position: relative;
-
-    /* gradient shadow */
-    &::before {
-        content: '';
-        width: calc(100% + 12px);
-        height: calc(100% + 20px);
-        background-image: linear-gradient(to bottom, rgba($blue, 0), $dark-blue 40%);
-        border-radius: 10px;
-        opacity: 0.5;
-        filter: blur(10px);
-        position: absolute;
-        top: 0px;
-        left: -6px;
-        z-index: -1;
-    }
 }
 
 /* block with the company info */

@@ -1,3 +1,5 @@
+/* toggle the images when a user clicks on it */
+
 const filterFunctionality = (servicesImages, currentImage, textItems) => {
     // clicked image index
     const imageIndex = [...servicesImages].indexOf(currentImage);

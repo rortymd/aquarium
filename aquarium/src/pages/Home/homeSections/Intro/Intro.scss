@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    margin-bottom: 50px;
     position: relative;
 
     /* background image shadow */
@@ -38,7 +39,20 @@
 .intro .container {
     grid-column: 1;
     grid-row: 1;
+    position: relative;
     z-index: 2;
+
+    &::after {
+        content: '';
+        width: 2px;
+        height: 50px;
+        background-color: $blue;
+        box-shadow: $shadowBasic;
+        position: absolute;
+        bottom: -50px;
+        left: 15px;
+        z-index: -1;
+    }
 }
 
 .intro__inner {
@@ -207,6 +221,12 @@
     }
 
     /* main content */
+    .intro .container {
+        &::after {
+            left: 10px;
+        }
+    }
+
     .intro__inner {
         flex-direction: column;
     }
@@ -245,6 +265,13 @@
 
 /* mobile phones */
 @media (max-width: $phone) {
+    /* main content */
+    .intro .container {
+        &::after {
+            left: 5px;
+        }
+    }
+
     /* intro main title */
     .intro__title {
         font-size: 44px;

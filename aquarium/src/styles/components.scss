@@ -176,7 +176,7 @@ example:
 
 /* section title */
 .title {
-    margin: 50px 0;
+    margin-bottom: 50px;
     color: $white;
     font-family: $playfair;
     font-size: 54px;
@@ -186,19 +186,18 @@ example:
 
 /* section borders */
 @mixin sectionRightBorder {
-    margin-top: 50px;
-    border-top: 2px solid $blue;
+    padding: 50px 0;
     position: relative;
 
     &::before {
         content: '';
-        width: 2px;
-        height: 53px;
+        width: 100%;
+        height: 2px;
         background-color: $blue;
         box-shadow: $shadowBasic;
         position: absolute;
-        top: -53px;
-        left: 0;
+        top: 0;
+        right: 0;
         z-index: -1;
     }
 
@@ -216,18 +215,17 @@ example:
 }
 
 @mixin sectionLeftBorder {
-    margin-top: 50px;
-    border-top: 2px solid $blue;
+    padding: 50px 0;
     position: relative;
 
     &::before {
         content: '';
-        width: 2px;
-        height: 53px;
+        width: 100%;
+        height: 2px;
         background-color: $blue;
         box-shadow: $shadowBasic;
         position: absolute;
-        top: -53px;
+        top: 0;
         right: 0;
         z-index: -1;
     }
@@ -256,7 +254,7 @@ example:
     }
 
     .title {
-        margin: 40px 0;
+        margin-bottom: 40px;
         font-size: 44px;
     }
 }
@@ -268,7 +266,7 @@ example:
     }
 
     .title {
-        margin: 30px 0;
+        margin-bottom: 30px;
         font-size: 34px;
     }
 }
