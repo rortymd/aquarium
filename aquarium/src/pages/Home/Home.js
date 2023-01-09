@@ -8,6 +8,7 @@ import 'Src/fonts/fonts.scss';
 import lazyLoadImages from 'Components/lazyLoadImages/lazyLoadImages';
 import 'Components/lazyLoadImages/lazyLoadImages.scss';
 import hideLoadingPlaceholder from 'Components/loadingPlaceholder/hideLoadingPlaceholder';
+import 'Components/stickyImages/stickyImages.scss';
 // sections
 import { HeaderSection } from 'Sections/Header/Header';
 import { IntroSection } from './homeSections/Intro/Intro';

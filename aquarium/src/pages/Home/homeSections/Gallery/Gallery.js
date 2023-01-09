@@ -7,15 +7,24 @@ const GallerySection = () => {
 
     galleryItems.forEach((item) => {
         // mouse
+        item.addEventListener('mouseover', () => {
+            item.style.filter = 'brightness(1)';
+        });
+
         item.addEventListener('mousemove', (event) => {
             moveX(event, item);
             moveY(event, item);
+        });
+
+        item.addEventListener('mouseleave', () => {
+            item.style.filter = 'brightness(0.75)';
         });
 
         // touchscreen
         // prevent scrolling
         item.addEventListener('touchstart', () => {
             document.body.classList.add('no-scroll');
+            item.style.filter = 'brightness(1)';
         });
 
         item.addEventListener('touchmove', (event) => {
@@ -26,6 +35,7 @@ const GallerySection = () => {
         // allow scrolling
         item.addEventListener('touchend', () => {
             document.body.classList.remove('no-scroll');
+            item.style.filter = 'brightness(0.75)';
         });
 
         // prevent showing the contextmenu on mobile devices (annoying as hell)

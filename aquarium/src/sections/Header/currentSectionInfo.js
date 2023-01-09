@@ -2,54 +2,56 @@
 
 const currentSectionInfo = () => {
     // list of sections
-    const sectionsList = document.querySelectorAll('.main > section');
+    const sectionsList = ['gallery', 'inhabitants', 'prices', 'services', 'testimonials', 'contact'];
+
     // list of navigation links
     const linksList = document.querySelectorAll('.navigation__link');
 
-    const highlightViewportSectionLink = () => {
-        sectionsList.forEach((section, index) => {
-            // do not include the first section (intro)
-            if (index > 0) {
-                // coordinates of the section
-                const coord = section.getBoundingClientRect();
+    function highlightViewportSectionLink(section) {
+        // coordinates of the section
+        let coord = section.getBoundingClientRect();
 
-                const addActiveSessionInfo = () => {
-                    linksList.forEach((link) => {
-                        const href = link.getAttribute('href');
+        const addActiveSessionInfo = () => {
+            linksList.forEach((link) => {
+                const href = link.getAttribute('href');
 
-                        if (href === section.className) {
-                            link.classList.add('navigation__link--active');
-                        } else {
-                            link.classList.remove('navigation__link--active');
-                        }
-                    });
-                };
-
-                const removeActiveSessionInfo = () => {
-                    linksList.forEach((link) => {
-                        const href = link.getAttribute('href');
-
-                        if (href === section.className) {
-                            link.classList.remove('navigation__link--active');
-                        }
-                    });
-                };
-
-                if (coord.top < window.innerHeight / 2.3 && coord.top > 0) {
-                    addActiveSessionInfo();
-                } else if (coord.top > window.innerHeight / 2) {
-                    removeActiveSessionInfo();
-                } else if (coord.bottom > window.innerHeight / 2.3) {
-                    addActiveSessionInfo();
-                } else if (coord.bottom < window.innerHeight / 2 && coord.bottom > 0) {
-                    removeActiveSessionInfo();
+                if (href === section.className) {
+                    link.classList.add('navigation__link--active');
+                } else {
+                    link.classList.remove('navigation__link--active');
                 }
-            }
-        });
-    };
+            });
+        };
 
-    highlightViewportSectionLink();
-    window.addEventListener('scroll', highlightViewportSectionLink);
+        const removeActiveSessionInfo = () => {
+            linksList.forEach((link) => {
+                const href = link.getAttribute('href');
+
+                if (href === section.className) {
+                    link.classList.remove('navigation__link--active');
+                }
+            });
+        };
+
+        if (coord.top < window.innerHeight / 2.3 && coord.top > 0) {
+            addActiveSessionInfo();
+        } else if (coord.top > window.innerHeight / 2) {
+            removeActiveSessionInfo();
+        } else if (coord.bottom > window.innerHeight / 2.3) {
+            addActiveSessionInfo();
+        } else if (coord.bottom < window.innerHeight / 2 && coord.bottom > 0) {
+            removeActiveSessionInfo();
+        }
+    }
+
+    sectionsList.forEach((item) => {
+        const section = document.querySelector(`.${item}`);
+
+        highlightViewportSectionLink(section);
+        window.addEventListener('scroll', () => {
+            highlightViewportSectionLink(section);
+        });
+    });
 };
 
 export { currentSectionInfo };

@@ -14,8 +14,9 @@
 .gallery__picture-wrapper {
     overflow: hidden;
     border-radius: 2px;
-    box-shadow: $shadowBasic;
+    box-shadow: 0 0 15px 5px rgba(21, 26, 48, 0.75);
     transition: $transitionBasic;
+    filter: brightness(0.75);
     cursor: crosshair;
 
     .image {
@@ -29,14 +30,9 @@
             height: min-content;
             transform: scale(0.7);
             transform-origin: top left;
-            opacity: 0.75;
             transition: $transitionBasic;
             transition-property: opacity;
             position: relative;
-
-            &:hover {
-                opacity: 1;
-            }
         }
     }
 

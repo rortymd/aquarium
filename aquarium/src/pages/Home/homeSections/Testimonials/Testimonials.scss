@@ -21,7 +21,7 @@
 
         .testimonials__slide-inner {
             background-image: linear-gradient(to bottom, rgba($blue, 0), $dark-blue 20%);
-            opacity: 1;
+            filter: brightness(1);
             transform: scale(1.25);
 
             &::before {
@@ -39,7 +39,7 @@
     border-radius: 2px;
     box-shadow: 0 0 10px 10px rgba(0, 5, 27, 0.25);
     transition: $transitionBasic;
-    opacity: 0.8;
+    filter: brightness(0.85);
     position: relative;
 
     p {

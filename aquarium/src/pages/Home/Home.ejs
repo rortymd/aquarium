@@ -19,11 +19,20 @@
     <%- include('../../sections/Header/Header.ejs') %>
     <main class="main">
         <%- include('./homeSections/Intro/Intro.ejs') %>
-        <%- include('./homeSections/Gallery/Gallery.ejs') %>
-        <%- include('./homeSections/Inhabitants/Inhabitants.ejs') %>
-        <%- include('./homeSections/Prices/Prices.ejs') %>
-        <%- include('./homeSections/Services/Services.ejs') %>
-        <%- include('./homeSections/Testimonials/Testimonials.ejs') %>
+        <div class="sticky-group">
+            <%- include('../../components/stickyImages/stickyImages-1.ejs') %>
+            <%- include('./homeSections/Gallery/Gallery.ejs') %>
+        </div>
+        <div class="sticky-group">
+            <%- include('../../components/stickyImages/stickyImages-2.ejs') %>
+            <%- include('./homeSections/Inhabitants/Inhabitants.ejs') %>
+            <%- include('./homeSections/Prices/Prices.ejs') %>
+        </div>
+        <div class="sticky-group">
+            <%- include('../../components/stickyImages/stickyImages-3.ejs') %>
+            <%- include('./homeSections/Services/Services.ejs') %>
+            <%- include('./homeSections/Testimonials/Testimonials.ejs') %>
+        </div>
         <%- include('./homeSections/ContactUs/ContactUs.ejs') %>
     </main>
     <%- include('../../sections/Footer/Footer.ejs') %>
