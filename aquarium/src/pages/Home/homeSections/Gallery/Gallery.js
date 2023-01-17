@@ -2,6 +2,9 @@
 import './Gallery.scss';
 
 const GallerySection = () => {
+    // root element
+    const root = document.querySelector('.root');
+
     // section images wrappers
     const galleryItems = document.querySelectorAll('.gallery__picture-wrapper');
 
@@ -23,7 +26,7 @@ const GallerySection = () => {
         // touchscreen
         // prevent scrolling
         item.addEventListener('touchstart', () => {
-            document.body.classList.add('no-scroll');
+            root.classList.add('no-scroll');
             item.style.filter = 'brightness(1)';
         });
 
@@ -34,7 +37,7 @@ const GallerySection = () => {
 
         // allow scrolling
         item.addEventListener('touchend', () => {
-            document.body.classList.remove('no-scroll');
+            root.classList.remove('no-scroll');
             item.style.filter = 'brightness(0.75)';
         });
 

@@ -44,11 +44,14 @@ const currentSectionInfo = () => {
         }
     }
 
+    // root element (could be "window" instead)
+    const root = document.querySelector('.root');
+
     sectionsList.forEach((item) => {
         const section = document.querySelector(`.${item}`);
 
         highlightViewportSectionLink(section);
-        window.addEventListener('scroll', () => {
+        root.addEventListener('scroll', () => {
             highlightViewportSectionLink(section);
         });
     });

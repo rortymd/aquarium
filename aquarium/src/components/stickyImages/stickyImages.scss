@@ -13,6 +13,7 @@
 /* wrapper for the hovering jellyfish image */
 .sticky-wrapper {
     position: sticky;
+    z-index: 1;
 
     .container{
         position: relative;
@@ -26,6 +27,8 @@
     transition: $transitionBasic;
     transition-property: opacity;
     position: absolute;
+    top: 0;
+    z-index: 1;
 
     &.image-loaded {
         opacity: 0.75;

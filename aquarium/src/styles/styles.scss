@@ -12,12 +12,19 @@
     line-height: 120%;
 }
 
-/* make the footer always stick to the bottom even if there's no content on the page */
-body {
+/* wrapper needed for the parallax effect */
+.root {
+    /* make the footer always stick to the bottom even if there's no content on the page */
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
     background-color: #00051b;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+    perspective-origin: 0 0;
+    perspective-origin: center 0;
+    position: relative;
 }
 
 /* SCREEN ADAPTATION */

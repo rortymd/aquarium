@@ -17,25 +17,36 @@
     <%- include('../../components/loadingPlaceholder/loadingPlaceholder.ejs') %>
     <%# page content %>
     <%- include('../../sections/Header/Header.ejs') %>
-    <main class="main">
-        <%- include('./homeSections/Intro/Intro.ejs') %>
-        <div class="sticky-group">
-            <%- include('../../components/stickyImages/stickyImages-1.ejs') %>
+    <%# need this 'root' wrapper to add the parallax effect %>
+    <div class="root">
+        <%# parallax background %>
+        <div class="intro__background">
+            <!-- <img src="./homeSections/Intro/img/intro-img.webp" class="intro__bg-img" width="2000px" height="1126px" alt="picture of The Aquarium"> -->
+            <picture class="intro__bg-img">
+                <source media="(max-width: 768px)" srcset="./homeSections/Intro/img/intro-img-sm.webp" class="" width="768px" height="1109px" alt="picture of The Aquarium">
+                <img src="./homeSections/Intro/img/intro-img.webp" class="" width="2000px" height="1126px" alt="picture of The Aquarium">
+            </picture>
+            <%- include('./homeSections/Intro/Intro.ejs') %>
+        </div>
+        <main class="main">
             <%- include('./homeSections/Gallery/Gallery.ejs') %>
-        </div>
-        <div class="sticky-group">
-            <%- include('../../components/stickyImages/stickyImages-2.ejs') %>
-            <%- include('./homeSections/Inhabitants/Inhabitants.ejs') %>
-            <%- include('./homeSections/Prices/Prices.ejs') %>
-        </div>
-        <div class="sticky-group">
-            <%- include('../../components/stickyImages/stickyImages-3.ejs') %>
-            <%- include('./homeSections/Services/Services.ejs') %>
-            <%- include('./homeSections/Testimonials/Testimonials.ejs') %>
-        </div>
-        <%- include('./homeSections/ContactUs/ContactUs.ejs') %>
-    </main>
-    <%- include('../../sections/Footer/Footer.ejs') %>
+            <div class="sticky-group">
+                <%- include('../../components/stickyImages/stickyImages-1.ejs') %>
+                <%- include('./homeSections/Inhabitants/Inhabitants.ejs') %>
+                <%- include('./homeSections/Prices/Prices.ejs') %>
+            </div>
+            <div class="sticky-group">
+                <%- include('../../components/stickyImages/stickyImages-2.ejs') %>
+                <%- include('./homeSections/Services/Services.ejs') %>
+            </div>
+            <div class="sticky-group">
+                <%- include('../../components/stickyImages/stickyImages-3.ejs') %>
+                <%- include('./homeSections/Testimonials/Testimonials.ejs') %>
+            </div>
+            <%- include('./homeSections/ContactUs/ContactUs.ejs') %>
+        </main>
+        <%- include('../../sections/Footer/Footer.ejs') %>
+    </div>
 </body>
 
 </html>

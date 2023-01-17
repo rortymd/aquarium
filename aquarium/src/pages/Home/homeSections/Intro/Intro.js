@@ -1,6 +1,7 @@
 // libraries
 import Plyr from 'plyr';
 import 'plyr/dist/plyr.css';
+import balanceText from 'balance-text';
 // styles
 import './Intro.scss';
 
@@ -51,6 +52,9 @@ const IntroSection = () => {
 
     playVideoBtn.addEventListener('click', playVideo);
     player.on('exitfullscreen', stopVideo);
+
+    /* balance text library */
+    balanceText();
 };
 
 export { IntroSection };

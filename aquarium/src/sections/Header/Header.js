@@ -89,9 +89,15 @@ const HeaderSection = () => {
         link.onclick = (event) => {
             event.preventDefault();
 
-            let elOffset = document.querySelector(`.${link.getAttribute('href')}`).offsetTop - header.clientHeight;
+            const elemRect = document.querySelector(`.${link.getAttribute('href')}`).getBoundingClientRect();
+
+            const elOffset = elemRect.y - header.clientHeight;
 
             animateScrollTo(elOffset);
+            // window.scrollTo({
+            //     top: elOffset,
+            //     behavior: 'smooth',
+            // });
 
             // hide menu if opened
             if (isNavActive) {
@@ -101,8 +107,10 @@ const HeaderSection = () => {
     });
 
     /* header styles during scrolling */
+    const root = document.querySelector('.root');
+
     function headerScroll() {
-        if (window.scrollY >= 400) {
+        if (root.scrollTop >= 400) {
             header.classList.add('header--scroll');
         } else {
             header.classList.remove('header--scroll');
@@ -110,7 +118,7 @@ const HeaderSection = () => {
     }
 
     headerScroll();
-    window.addEventListener('scroll', headerScroll);
+    root.addEventListener('scroll', headerScroll);
 
     /* show an user the information, which section is currently in their viewport */
     currentSectionInfo();

@@ -243,6 +243,11 @@ example:
     }
 }
 
+/* balance text library */
+.balance-text {
+    text-wrap: balance; /* Apply (proposed) CSS style */
+}
+
 /* SCREEN ADAPTATION */
 @media (max-width: $smallScreen) {
 }
