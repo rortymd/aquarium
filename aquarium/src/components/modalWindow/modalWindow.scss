@@ -8,6 +8,7 @@
     opacity: 0;
     transition: 0.35s linear;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     position: fixed;
     top: 0;
     left: 0;

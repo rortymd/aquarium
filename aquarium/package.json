@@ -58,6 +58,7 @@
         "animated-scroll-to": "^2.3.0",
         "balance-text": "^3.3.1",
         "hamburgers": "^1.2.1",
+        "overlayscrollbars": "^2.0.3",
         "plyr": "^3.7.3"
     }
 }

@@ -21,10 +21,9 @@
     <div class="root">
         <%# parallax background %>
         <div class="intro__background">
-            <!-- <img src="./homeSections/Intro/img/intro-img.webp" class="intro__bg-img" width="2000px" height="1126px" alt="picture of The Aquarium"> -->
             <picture class="intro__bg-img">
-                <source media="(max-width: 768px)" srcset="./homeSections/Intro/img/intro-img-sm.webp" class="" width="768px" height="1109px" alt="picture of The Aquarium">
-                <img src="./homeSections/Intro/img/intro-img.webp" class="" width="2000px" height="1126px" alt="picture of The Aquarium">
+                <source media="(max-width: 768px)" srcset="./homeSections/Intro/img/intro-img-sm.webp" width="768px" height="1109px" alt="picture of The Aquarium">
+                <img src="./homeSections/Intro/img/intro-img.webp" width="2000px" height="1126px" alt="picture of The Aquarium">
             </picture>
             <%- include('./homeSections/Intro/Intro.ejs') %>
         </div>
@@ -47,6 +46,7 @@
         </main>
         <%- include('../../sections/Footer/Footer.ejs') %>
     </div>
+    <%- include('../../sections/Author/Author.ejs') %>
 </body>
 
 </html>
