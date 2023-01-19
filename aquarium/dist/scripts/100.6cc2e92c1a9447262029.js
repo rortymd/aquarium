@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkaquarium=self.webpackChunkaquarium||[]).push([[100],{7100:function(e,r,t){t.r(r),t.d(r,{PricesSection:function(){return s}});const s=()=>{const e=document.querySelectorAll(".prices__item"),r=new IntersectionObserver(((e,r)=>{e.forEach((e=>{e.isIntersecting&&(e.target.classList.add("prices__item--show"),r.unobserve(e.target))}))}),{threshold:.5});e.forEach((e=>{r.observe(e)}))}}}]);
+//# sourceMappingURL=100.6cc2e92c1a9447262029.js.map

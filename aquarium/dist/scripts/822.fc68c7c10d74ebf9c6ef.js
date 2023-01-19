@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkaquarium=self.webpackChunkaquarium||[]).push([[822],{7822:function(u,n,t){t.r(n),t.d(n,{AuthorSection:function(){return r}});var e=t(9725),c=t(2877);const r=()=>{document.querySelector(".author__btn").addEventListener("click",(function(){(0,e.L)(c.Z)}))}}}]);
+//# sourceMappingURL=822.fc68c7c10d74ebf9c6ef.js.map

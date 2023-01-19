@@ -27,11 +27,27 @@ HeaderSection();
 IntroSection();
 GallerySection();
 InhabitantsSection();
-PricesSection();
-ServicesSection();
-TestimonialsSection();
-ContactUsSection();
-AuthorSection();
+// PricesSection();
+// ServicesSection();
+// TestimonialsSection();
+// ContactUsSection();
+// AuthorSection();
+import('./homeSections/Prices/Prices').then((section) => {
+    section.PricesSection();
+});
+import('./homeSections/Services/Services').then((section) => {
+    section.ServicesSection();
+});
+import('./homeSections/Testimonials/Testimonials').then((section) => {
+    section.TestimonialsSection();
+});
+import('./homeSections/ContactUs/ContactUs').then((section) => {
+    section.ContactUsSection();
+});
+import('Sections/Author/Author').then((section) => {
+    section.AuthorSection();
+});
+console.log('di');
 
 window.addEventListener('DOMContentLoaded', () => {
     hideLoadingPlaceholder();
