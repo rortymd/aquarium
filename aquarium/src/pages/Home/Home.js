@@ -29,16 +29,20 @@ if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
     osInstance = OverlayScrollbars(document.querySelector('.root'), {});
 }
 
-/* sections */
-HeaderSection();
-IntroSection();
-GallerySection();
-InhabitantsSection();
-PricesSection();
-ServicesSection();
-TestimonialsSection();
-ContactUsSection();
-AuthorSection();
+try {
+    /* sections */
+    HeaderSection();
+    IntroSection();
+    GallerySection();
+    InhabitantsSection();
+    PricesSection();
+    ServicesSection();
+    TestimonialsSection();
+    ContactUsSection();
+    AuthorSection();
+} catch (error) {
+    console.error(error);
+}
 
 window.addEventListener('DOMContentLoaded', () => {
     hideLoadingPlaceholder();

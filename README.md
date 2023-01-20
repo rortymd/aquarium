@@ -15,3 +15,4 @@ Used services:
 3. JPG to WebP converter - https://convertio.co/, https://www.online-convert.com/
 4. Photos and video source - https://www.pexels.com/, https://unsplash.com/, https://www.freepnglogos.com/
 5. SVG editor - https://boxy-svg.com/
+6. Loading placeholder - https://loading.io/css/

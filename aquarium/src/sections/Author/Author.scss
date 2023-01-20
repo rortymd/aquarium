@@ -2,6 +2,7 @@
 
 .author {
     margin: 0 auto;
+    pointer-events: none;
     position: fixed;
     bottom: 50px;
     left: 30px;
@@ -28,6 +29,7 @@
     opacity: 0.8;
     transition: $transitionBasic;
     cursor: pointer;
+    pointer-events: auto;
 
     svg {
         animation: markAnim 5s linear infinite;
