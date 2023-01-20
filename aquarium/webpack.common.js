@@ -30,7 +30,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.mp4$/i,
+                test: /\.(mp4|webm)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: 'videos/[name][ext]',

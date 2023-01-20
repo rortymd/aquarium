@@ -1,6 +1,7 @@
 // libraries
-import 'hamburgers/dist/hamburgers.min.css';
+import './hamburger.scss';
 import animateScrollTo from 'animated-scroll-to';
+import { osInstance } from '../../pages/Home/Home';
 // components
 import { currentSectionInfo } from './currentSectionInfo';
 // styles
@@ -19,12 +20,22 @@ const HeaderSection = () => {
     // navigation menu status
     let isNavActive = false;
 
+    // page viewport
+    let viewport;
+
+    if (osInstance) {
+        // in case the custom scrollbar is used
+        viewport = document.querySelector('.os-viewport');
+    } else {
+        viewport = document.querySelector('.root');
+    }
+
     function showNav() {
         isNavActive = true;
 
         navBtn.classList.add('is-active');
         navList.classList.add('header__links-list--active');
-        document.body.classList.add('no-scroll');
+        viewport.classList.add('no-scroll');
 
         // allow keyboard navigation
         navLinks.forEach((link) => {
@@ -37,7 +48,7 @@ const HeaderSection = () => {
 
         navBtn.classList.remove('is-active');
         navList.classList.remove('header__links-list--active');
-        document.body.classList.remove('no-scroll');
+        viewport.classList.remove('no-scroll');
 
         // prevent keyboard navigation
         navLinks.forEach((link) => {
@@ -91,13 +102,12 @@ const HeaderSection = () => {
 
             const elemRect = document.querySelector(`.${link.getAttribute('href')}`).getBoundingClientRect();
 
-            const elOffset = elemRect.y - header.clientHeight;
+            const elOffset = viewport.scrollTop + elemRect.top - header.clientHeight;
 
-            animateScrollTo(elOffset);
-            // window.scrollTo({
-            //     top: elOffset,
-            //     behavior: 'smooth',
-            // });
+            animateScrollTo(elOffset, {
+                cancelOnUserAction: false,
+                elementToScroll: viewport,
+            });
 
             // hide menu if opened
             if (isNavActive) {
@@ -107,10 +117,8 @@ const HeaderSection = () => {
     });
 
     /* header styles during scrolling */
-    const root = document.querySelector('.root');
-
     function headerScroll() {
-        if (root.scrollTop >= 400) {
+        if (viewport.scrollTop >= 400) {
             header.classList.add('header--scroll');
         } else {
             header.classList.remove('header--scroll');
@@ -118,9 +126,9 @@ const HeaderSection = () => {
     }
 
     headerScroll();
-    root.addEventListener('scroll', headerScroll);
+    viewport.addEventListener('scroll', headerScroll);
 
-    /* show an user the information, which section is currently in their viewport */
+    /* show a user the information, which section is currently in their viewport */
     currentSectionInfo();
 };
 

@@ -23,38 +23,26 @@ import { ContactUsSection } from './homeSections/ContactUs/ContactUs';
 import 'Sections/Footer/Footer.scss';
 import { AuthorSection } from 'Sections/Author/Author';
 
+/* use the custom scrollbar but only on desktop devices */
+let osInstance;
+if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    osInstance = OverlayScrollbars(document.querySelector('.root'), {});
+}
+
+/* sections */
 HeaderSection();
 IntroSection();
 GallerySection();
 InhabitantsSection();
-// PricesSection();
-// ServicesSection();
-// TestimonialsSection();
-// ContactUsSection();
-// AuthorSection();
-import('./homeSections/Prices/Prices').then((section) => {
-    section.PricesSection();
-});
-import('./homeSections/Services/Services').then((section) => {
-    section.ServicesSection();
-});
-import('./homeSections/Testimonials/Testimonials').then((section) => {
-    section.TestimonialsSection();
-});
-import('./homeSections/ContactUs/ContactUs').then((section) => {
-    section.ContactUsSection();
-});
-import('Sections/Author/Author').then((section) => {
-    section.AuthorSection();
-});
-console.log('di');
+PricesSection();
+ServicesSection();
+TestimonialsSection();
+ContactUsSection();
+AuthorSection();
 
 window.addEventListener('DOMContentLoaded', () => {
     hideLoadingPlaceholder();
     lazyLoadImages();
 });
 
-/* use the custom scrollbar but only on desktop devices */
-if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    const osInstance = OverlayScrollbars(document.querySelector('.root'), {});
-}
+export { osInstance };

@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkaquarium=self.webpackChunkaquarium||[]).push([[779],{3779:function(u,e,n){n.r(e),n.d(e,{ServicesSection:function(){return r}});var c=n(3244);const r=()=>{(0,c.$)()}}}]);
-//# sourceMappingURL=779.91e537f1c790ba146e60.js.map

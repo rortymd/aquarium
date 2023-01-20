@@ -1,5 +1,8 @@
 /* show a user the information, which section is currently in their viewport (highlight the link, which corresponds to it; but the script could be used anywhere. to show a text node, for example) */
 
+/* custom scrollbar */
+import { osInstance } from '../../pages/Home/Home';
+
 const currentSectionInfo = () => {
     // list of sections
     const sectionsList = ['gallery', 'inhabitants', 'prices', 'services', 'testimonials', 'contact'];
@@ -44,14 +47,21 @@ const currentSectionInfo = () => {
         }
     }
 
-    // root element (could be "window" instead)
-    const root = document.querySelector('.root');
+    // page viewport
+    let viewport;
+
+    if (osInstance) {
+        // in case the custom scrollbar is used
+        viewport = document.querySelector('.os-viewport');
+    } else {
+        viewport = document.querySelector('.root');
+    }
 
     sectionsList.forEach((item) => {
         const section = document.querySelector(`.${item}`);
 
         highlightViewportSectionLink(section);
-        root.addEventListener('scroll', () => {
+        viewport.addEventListener('scroll', () => {
             highlightViewportSectionLink(section);
         });
     });
