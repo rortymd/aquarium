@@ -22,7 +22,7 @@
         "url": "https://github.com/DmitriyR54/aquarium/issues"
     },
     "homepage": "https://github.com/DmitriyR54/aquarium#readme",
-    "browserslist": "> 2%, not dead",
+    "browserslist": ">0.3%, last 3 years, not dead",
     "devDependencies": {
         "@babel/core": "^7.17.9",
         "@babel/preset-env": "^7.16.11",

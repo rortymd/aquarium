@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
+        shared: 'core-js/actual',
         homePage: './src/pages/Home/Home.js',
     },
     output: {
@@ -57,7 +58,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/pages/Home/Home.ejs',
             filename: 'index.html',
-            chunks: ['homePage'],
+            chunks: ['homePage', 'shared'],
         }),
     ],
     resolve: {

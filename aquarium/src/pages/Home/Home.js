@@ -1,5 +1,4 @@
 // libraries
-import 'core-js/actual';
 import 'modern-normalize/modern-normalize.css';
 import 'overlayscrollbars/overlayscrollbars.css';
 import { OverlayScrollbars } from 'overlayscrollbars';
